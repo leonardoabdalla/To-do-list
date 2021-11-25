@@ -1,10 +1,11 @@
-let butao = document.querySelector('#criar-tarefa');
+let botao = document.querySelector('#criar-tarefa');
 
 function salvaTexto() {  
-  let ul = document.querySelector('#lista-tarefas').innerText;
   let digitado = document.querySelector('#texto-tarefa').value;
-  ul = ul + "<li>" + digitado + "</li>";
-  document.getElementById("lista-tarefas").innerHTML = ul;
+  let ol = document.querySelector('#lista-tarefas');
+  let addLi = document.createElement('li');
+  addLi.innerText = digitado;
+  ol.appendChild(addLi);
 }
 
-butao.addEventListener('click', salvaTexto);
+botao.addEventListener('click', salvaTexto);
