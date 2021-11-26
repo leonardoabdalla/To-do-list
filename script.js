@@ -1,15 +1,34 @@
 let botao = document.querySelector('#criar-tarefa');
+let ol = document.querySelector('#lista-tarefas');
+let li = document.querySelectorAll('.li');
+const lista2 = document.getElementsByTagName('li');
+const corMuda = 'rgb(128, 128, 128)';
+let listage;
 
 function salvaTexto() { 
-  let digitado = document.querySelector('#texto-tarefa').value;
-  let ol = document.querySelector('#lista-tarefas');
-  let addLi = document.createElement('li');
+  const digitado = document.querySelector('#texto-tarefa').value;
+  const addLi = document.createElement('li');
   addLi.innerText = digitado;
   ol.appendChild(addLi);
-  document.querySelector("#texto-tarefa").value="";
-  //document.getElementById('texto-tarefa').remove();
-  //digitado.remove();
+  addLi.classList = 'li';
+  document.querySelector('#texto-tarefa').value = '';
 }
 
 botao.addEventListener('click', salvaTexto);
+
+function trocaCor(event) {
+  const clickCor = event.target;
+  if (clickCor.tagName == 'LI') {
+    corBranco();
+    clickCor.style.backgroundColor = corMuda;
+    listage = event.target;
+  }
+}
+document.addEventListener('click', trocaCor);
+
+function corBranco() {
+  for (let i = 0; i < lista2.length; i += 1) {
+    lista2[i].style.backgroundColor = 'white';
+  }
+}
 
