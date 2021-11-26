@@ -1,6 +1,5 @@
 let botao = document.querySelector('#criar-tarefa');
 let ol = document.querySelector('#lista-tarefas');
-let li = document.querySelectorAll('.li');
 const lista2 = document.getElementsByTagName('li');
 const corMuda = 'rgb(128, 128, 128)';
 let listage;
