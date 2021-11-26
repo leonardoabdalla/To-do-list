@@ -38,9 +38,10 @@ function corBranco() {
 
 // Apaga todas tarefas
 function apagador() {
-  document.querySelector('#lista-tarefas').remove();
+  for (let i = 0; i < lista2.length; i += 1) {
+    lista2[i].innerHTML = '';
+  }
 }
-// document.getElementById('conteudo').remove() 
 
 apagaTudo.addEventListener('dblclick', apagador);
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
