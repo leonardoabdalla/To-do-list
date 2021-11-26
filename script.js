@@ -3,7 +3,7 @@ const ol = document.querySelector('#lista-tarefas');
 const lista2 = document.getElementsByTagName('li');
 const corMuda = 'rgb(128, 128, 128)';
 let listage;
-const apagaTudo = document.querySelector('#apaga-tudo').value;
+const apagaTudo = document.querySelector('#apaga-tudo');
 
 // adiciona tarefa
 function salvaTexto() { 
@@ -38,10 +38,9 @@ function corBranco() {
 
 // Apaga todas tarefas
 function apagador() {
-  for (let i = 0; i < lista2.length; i += 1) {
-    lista2[i].value = '';
-  }
+  document.querySelector('#lista-tarefas').remove();
 }
+// document.getElementById('conteudo').remove() 
 
-apagaTudo.addEventListener('click', apagador);
+apagaTudo.addEventListener('dblclick', apagador);
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
