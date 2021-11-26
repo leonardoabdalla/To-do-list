@@ -2,6 +2,8 @@ const botao = document.querySelector('#criar-tarefa');
 const ol = document.querySelector('#lista-tarefas');
 const lista2 = document.getElementsByTagName('li');
 const corMuda = 'rgb(128, 128, 128)';
+const listaOrdenada = document.querySelector('#lista-tarefas');
+
 let listage;
 const apagaTudo = document.querySelector('#apaga-tudo');
 
@@ -13,6 +15,7 @@ function salvaTexto() {
   ol.appendChild(addLi);
   addLi.classList = 'li';
   document.querySelector('#texto-tarefa').value = '';
+  console.log(addLi);
 }
 
 botao.addEventListener('click', salvaTexto);
@@ -38,9 +41,7 @@ function corBranco() {
 
 // Apaga todas tarefas
 function apagador() {
-  for (let i = 0; i < lista2.length; i += 1) {
-    lista2[i].innerHTML = '';
-  }
+  listaOrdenada.innerHTML = '';
 }
 
 apagaTudo.addEventListener('click', apagador);
