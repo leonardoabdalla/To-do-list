@@ -32,3 +32,5 @@ function corBranco() {
   }
 }
 
+//As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
+
