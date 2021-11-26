@@ -43,5 +43,5 @@ function apagador() {
   }
 }
 
-apagaTudo.addEventListener('dblclick', apagador);
+apagaTudo.addEventListener('click', apagador);
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
