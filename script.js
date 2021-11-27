@@ -62,9 +62,7 @@ ol.addEventListener('dblclick', tarefaConcluida);
 function removeFinalizados() {
   const delFin = document.querySelectorAll('.completed')
   for (let i = 0; i < delFin.length; i += 1) {
-    if (delFin[i].classList.contains('completed') === true) {
-      delFin[i].remove();
-    }
+    delFin[i].remove();
   }
 }
 apgFinal.addEventListener('click', removeFinalizados);
