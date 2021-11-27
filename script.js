@@ -8,6 +8,7 @@ let listage;
 let liAlvo;
 const apagaTudo = document.querySelector('#apaga-tudo');
 const completed = document.querySelector('.completed');
+const apgFinal = document.querySelector('#remover-finalizados');
 
 // adiciona tarefa
 function salvaTexto() { 
@@ -56,5 +57,14 @@ function tarefaConcluida(event) {
   }
 }
 ol.addEventListener('dblclick', tarefaConcluida);
+
+function removeFinalizados() {
+  for (let i = 0; i < lista2.length; i += 1) {
+    if(lista2[i].classList.contains('completed') == true) 
+      lista2[i].innerHTML = '';
+  }
+}
+apgFinal.addEventListener('click', removeFinalizados);
+
 
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
