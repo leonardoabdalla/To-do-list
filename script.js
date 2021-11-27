@@ -65,6 +65,6 @@ function removeFinalizados() {
   }
 }
 apgFinal.addEventListener('click', removeFinalizados);
-
+// https://tableless.com.br/manipulando-o-uso-de-classes-com-classlist-api/
 
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
