@@ -60,7 +60,7 @@ function tarefaConcluida(event) {
 ol.addEventListener('dblclick', tarefaConcluida);
 
 function removeFinalizados() {
-  const delFin = document.querySelectorAll('.completed')
+  const delFin = document.querySelectorAll('.completed');
   for (let i = 0; i < delFin.length; i += 1) {
     delFin[i].remove();
   }
