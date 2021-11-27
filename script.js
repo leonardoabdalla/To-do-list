@@ -44,11 +44,17 @@ function apagador() {
 }
 
 apagaTudo.addEventListener('click', apagador);
-
+// Tarefa concluida adiciona risco
 function tarefaConcluida(event) {
   const clickCor = event.target;
-  clickCor.classList = 'completed';
-  liAlvo = event.target;
+  if (clickCor.classList != 'completed') {
+    clickCor.classList = 'completed';
+    liAlvo = event.target;
+  } else {
+    clickCor.classList.remove('completed');
+    liAlvo = event.target;
+  }
 }
 ol.addEventListener('dblclick', tarefaConcluida);
+
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
