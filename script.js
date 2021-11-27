@@ -24,11 +24,9 @@ botao.addEventListener('click', salvaTexto);
 // muda a cor da tarefa para cinza
 function trocaCor(event) {
   const clickCor = event.target;
-  if (clickCor.tagName === 'LI') {
-    corBranco();
-    clickCor.style.backgroundColor = corMuda;
-    listage = event.target;
-  }
+  corBranco();
+  clickCor.style.backgroundColor = corMuda;
+  listage = event.target;
 }
 ol.addEventListener('click', trocaCor);
 
