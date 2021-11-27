@@ -1,6 +1,7 @@
 const botao = document.querySelector('#criar-tarefa');
 const ol = document.querySelector('#lista-tarefas');
 const lista2 = document.getElementsByTagName('li');
+const lista1 = document.getElementsByTagName('ol');
 const corMuda = 'rgb(128, 128, 128)';
 const listaOrdenada = document.querySelector('#lista-tarefas');
 const a = document.querySelector('#a');
@@ -59,9 +60,10 @@ function tarefaConcluida(event) {
 ol.addEventListener('dblclick', tarefaConcluida);
 
 function removeFinalizados() {
-  for (let i = 0; i < lista2.length; i += 1) {
-    if(lista2[i].classList.contains('completed') == true) 
-      lista2[i].innerHTML = '';
+  for (let i = 0; i < listaOrdenada.children.length; i += 1) {
+    if (listaOrdenada.children[i].classList.contains('completed') === true) {
+      listaOrdenada.children[i].innerHTML = '';
+    }
   }
 }
 apgFinal.addEventListener('click', removeFinalizados);
