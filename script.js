@@ -46,15 +46,9 @@ function apagador() {
 apagaTudo.addEventListener('click', apagador);
 
 function tarefaConcluida(event) {
- const clickRisc = event.target;
-  for (let i = 0; i < listaOrdenada.length; i += 1) {
-    if (clickRisc.tagName === 'LI') {
-      clickRisc.classList = 'completed';
-       liAlvo = event.target;
-    }
-    console.log(listaOrdenada[i]);
-  }
+  const clickCor = event.target;
+  clickCor.classList = 'completed';
+  liAlvo = event.target;
 }
-a.addEventListener('click', tarefaConcluida);
-
+ol.addEventListener('dblclick', tarefaConcluida);
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
