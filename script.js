@@ -60,13 +60,15 @@ function tarefaConcluida(event) {
 ol.addEventListener('dblclick', tarefaConcluida);
 
 function removeFinalizados() {
-  for (let i = 0; i < listaOrdenada.children.length; i += 1) {
-    if (listaOrdenada.children[i].classList.contains('completed') === true) {
-      listaOrdenada.children[i].innerHTML = '';
+  const delFin = document.querySelectorAll('.completed')
+  for (let i = 0; i < delFin.length; i += 1) {
+    if (delFin[i].classList.contains('completed') === true) {
+      delFin[i].remove();
     }
   }
 }
 apgFinal.addEventListener('click', removeFinalizados);
+// https://qastack.com.br/programming/4777077/removing-elements-by-class-name
 // https://tableless.com.br/manipulando-o-uso-de-classes-com-classlist-api/
 
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
