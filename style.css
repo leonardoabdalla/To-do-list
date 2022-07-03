@@ -1,3 +1,55 @@
+body{
+    background-color: green;
+    padding-top: 5%;
+}
 .completed{
     text-decoration: line-through;
+    background-color: aqua;
+}
+.bloco{
+    padding: 5%;
+    background-color: white;
+    border-radius: 8%;
+}
+h1{
+    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+    text-align: center;
+}
+#funcionamento{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: grey;
+    font-size:medium;
+    padding-top: 5%;
+}
+#criar-tarefa{
+    color: white;
+    padding: 5px;
+    background-color: rgb(0, 183, 255);
+    border-radius:10px;
+}
+#apaga-tudo{
+    color: white;
+    padding: 5px;
+    background-color: brown;
+    border-radius:10px;
+
+}
+#remover-finalizados{
+    color: white;
+    padding: 5px;
+    background-color: rgb(0, 183, 255);
+    border-radius:10px;
+
+}
+#salvar-tarefas{
+    color: white;
+    padding: 5px;
+    background-color: green;
+    border-radius:10px;
+}
+#texto-tarefa{
+  margin-bottom: 20px;
 }

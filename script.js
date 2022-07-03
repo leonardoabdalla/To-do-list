@@ -10,9 +10,11 @@ let liAlvo;
 const apagaTudo = document.querySelector('#apaga-tudo');
 const completed = document.querySelector('.completed');
 const apgFinal = document.querySelector('#remover-finalizados');
+const buttonSalvar = document.querySelector('#salvar-tarefas');
+let listItens2 = [];
 
 // adiciona tarefa
-function salvaTexto() { 
+function salvaTexto() {
   const digitado = document.querySelector('#texto-tarefa').value;
   const addLi = document.createElement('li');
   addLi.innerText = digitado;
@@ -49,7 +51,7 @@ apagaTudo.addEventListener('click', apagador);
 // Tarefa concluida adiciona risco
 function tarefaConcluida(event) {
   const clickCor = event.target;
-  if (clickCor.classList != 'completed') {
+  if (clickCor.classList !== 'completed') {
     clickCor.classList = 'completed';
     liAlvo = event.target;
   } else {
@@ -68,5 +70,12 @@ function removeFinalizados() {
 apgFinal.addEventListener('click', removeFinalizados);
 // https://qastack.com.br/programming/4777077/removing-elements-by-class-name
 // https://tableless.com.br/manipulando-o-uso-de-classes-com-classlist-api/
+
+function salvar() {
+  const listItens = ol;
+  listItens2.push(listItens);
+}
+buttonSalvar.addEventListener('click', salvar);
+console.log(listItens2);
 
 // As funções trocaCor e corBranco copiei prte do código de um site na internet, foi onde encontrei uma ideia que entendi.
